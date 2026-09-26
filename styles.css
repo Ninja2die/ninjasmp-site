@@ -362,3 +362,9 @@ body.lightbox-lock{overflow:hidden}
 .hero-logo{
   filter:drop-shadow(0 10px 14px rgba(0,0,0,.28));
 }
+
+/* ===== v8 mobile swipe ===== */
+.lightbox{
+  touch-action:pan-y;
+}
+

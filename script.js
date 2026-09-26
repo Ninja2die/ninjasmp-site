@@ -88,3 +88,41 @@ document.addEventListener("keydown", e => {
   if(e.key === "ArrowLeft") moveShot(-1);
   if(e.key === "ArrowRight") moveShot(1);
 });
+
+// Mobile swipe για screenshots
+let touchStartX = 0;
+let touchStartY = 0;
+let swipeActive = false;
+
+lightbox?.addEventListener("touchstart", (e) => {
+  if (e.target.closest("button")) {
+    swipeActive = false;
+    return;
+  }
+
+  const touch = e.changedTouches[0];
+  touchStartX = touch.screenX;
+  touchStartY = touch.screenY;
+  swipeActive = true;
+}, { passive: true });
+
+lightbox?.addEventListener("touchend", (e) => {
+  if (!swipeActive) return;
+
+  const touch = e.changedTouches[0];
+  const deltaX = touch.screenX - touchStartX;
+  const deltaY = touch.screenY - touchStartY;
+
+  if (
+    Math.abs(deltaX) > 50 &&
+    Math.abs(deltaX) > Math.abs(deltaY)
+  ) {
+    if (deltaX < 0) {
+      moveShot(1);
+    } else {
+      moveShot(-1);
+    }
+  }
+
+  swipeActive = false;
+}, { passive: true });
