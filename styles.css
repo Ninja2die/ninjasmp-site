@@ -133,22 +133,7 @@ img{display:block;max-width:100%}button,a{font:inherit}.wrap{width:min(1180px,ca
   padding:10px 4px;
 }
 
-/* Logo WOW glow */
-.hero-logo{
-  filter:
-    drop-shadow(0 0 12px rgba(78,233,255,.75))
-    drop-shadow(0 0 28px rgba(74,121,255,.5))
-    drop-shadow(0 0 48px rgba(255,77,0,.28));
-  animation:logoGlow 3.2s ease-in-out infinite alternate;
-}
-@keyframes logoGlow{
-  from{
-    filter:
-      drop-shadow(0 0 10px rgba(78,233,255,.6))
-      drop-shadow(0 0 22px rgba(74,121,255,.4))
-      drop-shadow(0 0 34px rgba(255,77,0,.18));
-  }
-  to{
+to{
     filter:
       drop-shadow(0 0 17px rgba(78,233,255,.9))
       drop-shadow(0 0 36px rgba(74,121,255,.62))
@@ -351,6 +336,29 @@ body.lightbox-lock{overflow:hidden}
   .lightbox-next{right:20px}
   .lightbox-stage img{max-height:70vh}
 }
-@media(prefers-reduced-motion:reduce){
-  .hero-logo{animation:none}
+
+/* ===== v7 lightweight logo glow ===== */
+.hero-content{
+  position:relative;
+  isolation:isolate;
+}
+.hero-content::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:50%;
+  top:46%;
+  width:min(760px,88vw);
+  height:300px;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 45% 50%,rgba(78,233,255,.26),transparent 46%),
+    radial-gradient(circle at 58% 52%,rgba(74,121,255,.20),transparent 55%),
+    radial-gradient(circle at 50% 64%,rgba(255,77,0,.12),transparent 58%);
+  filter:blur(20px);
+  opacity:.9;
+}
+.hero-logo{
+  filter:drop-shadow(0 10px 14px rgba(0,0,0,.28));
 }
