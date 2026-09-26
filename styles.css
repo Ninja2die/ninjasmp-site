@@ -494,3 +494,24 @@ body.lightbox-lock{overflow:hidden}
     justify-content: center;
   }
 }
+
+  border: 1px solid rgba(120, 225, 255, .7);
+
+  box-shadow:
+    0 0 15px rgba(43, 195, 255, .35),
+    0 0 28px rgba(24, 119, 242, .18);
+}
+
+.server-live:hover {
+  border-color: rgba(150, 235, 255, .95);
+
+  box-shadow:
+    0 0 22px rgba(43, 195, 255, .55),
+    0 0 40px rgba(24, 119, 242, .3);
+
+  transform: translateY(-2px);
+}
+
+.server-live-text small {
+  color: rgba(255,255,255,.8);
+}
