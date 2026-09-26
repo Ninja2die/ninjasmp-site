@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#161a38">
-  <meta name="description" content="Ninja SMP Season 2 — Java & Bedrock Minecraft SMP της κοινότητας του Ninja2die.">
+  <meta name="description" content="Ninja SMP Season 2 — ο Minecraft server της κοινότητας του Ninja2die για Java & Bedrock.">
   <title>Ninja SMP — Season 2</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -22,19 +22,27 @@
 
   <main id="top">
     <section class="hero">
-      <img class="hero-bg" src="assets/dragon.webp" alt="Μεγάλος δράκος στο Ninja SMP" fetchpriority="high">
+      <img class="hero-bg" src="assets/dragon.webp" alt="Μεγάλος δράκος σο Ninja SMP" fetchpriority="high">
       <div class="hero-shade"></div>
       <div class="hero-content">
         <div class="pill">🥷 SEASON 2 • MINECRAFT 26.3</div>
         <img class="hero-logo" src="assets/ninja-season2-logo.png" alt="Ninja Season 2 SMP">
         <p class="hero-text">Χτίσε. Γνώρισε κόσμο. Πάρε μέρος σε events. Γίνε κομμάτι της ιστορίας του server.</p>
         <div class="hero-actions">
-          <a class="btn btn-fire" href="https://www.youtube.com/@Ninja2die/join" target="_blank" rel="noopener">🔥 Μπες στο SMP με 0,99€ / μήνα</a>
+          <a class="btn btn-fire" href="https://www.youtube.com/@Ninja2die/join" target="_blank" rel="noopener">🔥 Μπες στον SMP με 0,99€ / μήνα</a>
           <button class="btn btn-ice copy" data-copy="NinjaSMP.gr">📋 NinjaSMP.gr</button>
         </div>
         <div class="edition-row">
-          <div><strong>JAVA</strong><span>NinjaSMP.gr</span></div>
-          <div><strong>BEDROCK</strong><span><b>IP:</b> NinjaSMP.gr<br><b>Port:</b> 19132</span></div>
+          <button class="edition-card copy" data-copy="NinjaSMP.gr" aria-label="Αντιγραφή Java IP">
+            <strong>JAVA</strong>
+            <span>IP: <b>NinjaSMP.gr</b></span>
+            <small>Πάτα για αντιγραφή 📋</small>
+          </button>
+          <div class="edition-card">
+            <strong>BEDROCK</strong>
+            <button class="edition-copy copy" data-copy="bedrock.NinjaSMP.gr">IP: <b>bedrock.NinjaSMP.gr</b> 📋</button>
+            <button class="edition-copy copy" data-copy="19132">Port: <b>19132</b> 📋</button>
+          </div>
         </div>
       </div>
     </section>
@@ -52,7 +60,7 @@
         <h2>Θες κάτι παραπάνω;</h2>
         <p>
           Με το <strong>Legendary Ninja</strong> membership στα <strong>8,99€ / μήνα</strong>,
-          εκτός από την πρόσβαση στο Ninja SMP παίρνεις και <strong>rank μέσα στον server</strong>.
+          εκτός από την πρόσβαση σο Ninja SMP παίρνεις και <strong>rank μέσα στον server</strong>.
         </p>
       </div>
       <a class="btn btn-legendary" href="https://www.youtube.com/@Ninja2die/join" target="_blank" rel="noopener">
@@ -61,10 +69,9 @@
     </section>
 
     <section class="stats wrap">
-      <article><b>340+</b><span>παίκτες έχουν περάσει</span></article>
-      <article><b>32+</b><span>SMP livestreams</span></article>
-      <article><b>6.000</b><span>blocks world border / κατεύθυνση</span></article>
-      <article><b>Java + Bedrock</b><span>στον ίδιο κόσμο</span></article>
+      <article><b>500+</b><span>παίκτες έχουν περάσει από τον Ninja SMP</span></article>
+      <article><b>6.000</b><span>blocks World Border / κατεύθυνση</span></article>
+      <article><b>Java + Bedrock</b><span>παίζουν στον ίδιο κόσμο</span></article>
     </section>
 
     <section class="section wrap" id="world">
@@ -76,23 +83,23 @@
 
       <div class="showcase">
         <figure class="wide">
-          <img src="assets/harbor.webp" alt="Λιμάνι με καράβι και φάρο" loading="lazy">
-          <figcaption>⚓ Το λιμάνι του SMP</figcaption>
+          <img src="assets/harbor.webp" alt="Λιμάνι με καράβι και φάρο" loading="lazy" class="screenshot-link" data-caption="⚓ Το λιμάνι του Ninja SMP">
+          <figcaption>⚓ Το λιμάνι του Ninja SMP</figcaption>
         </figure>
         <figure>
-          <img src="assets/frog_bee.webp" alt="Frog build και bee house" loading="lazy">
+          <img src="assets/frog_bee.webp" alt="Frog build και bee house" loading="lazy" class="screenshot-link" data-caption="🐸 Ναι… έχουμε και αυτό.">
           <figcaption>🐸 Ναι… έχουμε και αυτό.</figcaption>
         </figure>
         <figure>
-          <img src="assets/temple.webp" alt="Μεγάλος ναός στο ηλιοβασίλεμα" loading="lazy">
+          <img src="assets/temple.webp" alt="Μεγάλος ναός στο ηλιοβασίλεμα" loading="lazy" class="screenshot-link" data-caption="✨ Μεγάλα community builds">
           <figcaption>✨ Μεγάλα community builds</figcaption>
         </figure>
         <figure>
-          <img src="assets/autumn.webp" alt="Μεγάλο σπίτι με φθινοπωρινό δέντρο" loading="lazy">
+          <img src="assets/autumn.webp" alt="Μεγάλο σπίτι με φθινοπωρινό δέντρο" loading="lazy" class="screenshot-link" data-caption="🍂 Βάσεις με προσωπικότητα">
           <figcaption>🍂 Βάσεις με προσωπικότητα</figcaption>
         </figure>
         <figure>
-          <img src="assets/night_town.webp" alt="Πόλη τη νύχτα" loading="lazy">
+          <img src="assets/night_town.webp" alt="Πόλη τη νύχτα" loading="lazy" class="screenshot-link" data-caption="🌙 Το SMP ζωντανεύει μέρα και νύχτα">
           <figcaption>🌙 Το SMP ζωντανεύει μέρα και νύχτα</figcaption>
         </figure>
       </div>
@@ -101,9 +108,9 @@
     <section class="section fun-bg" id="join">
       <div class="wrap join-layout">
         <div class="join-copy">
-          <span class="eyebrow">🎮 ΠΩΣ ΜΠΑΙΝΩ ΣΤΟ SMP;</span>
+          <span class="eyebrow">🎮 ΠΩΣ ΜΠΑΙΝΩ ΣΤΟΝ SMP;</span>
           <h2>5 απλά βήματα και είσαι <em>μέσα.</em></h2>
-          <p>Το Ninja SMP είναι διαθέσιμο στα μέλη του καναλιού. Η βασική βαθμίδα YouTube Membership ξεκινά από 0,99€ / μήνα.</p>
+          <p>Ο Ninja SMP είναι διαθέσιμο στα μέλη του καναλιού. Η βασική βαθμίδα YouTube Membership ξεκινά από 0,99€ / μήνα.</p>
           <a class="btn btn-fire" href="https://www.youtube.com/@Ninja2die/join" target="_blank" rel="noopener">Γίνε μέλος τώρα →</a>
           <p class="join-note">Μετά το membership, το επόμενο βήμα είναι πάντα το <strong>ticket στο Discord</strong>. Μην περιμένεις να μπεις αυτόματα στη whitelist.</p>
         </div>
@@ -142,7 +149,7 @@
             <div>
               <b>Μπες και παίξε</b>
               <p><strong>Java:</strong> <button class="text-copy copy" data-copy="NinjaSMP.gr">NinjaSMP.gr</button><br>
-              <strong>Bedrock:</strong><br><span class="bedrock-line"><b>IP:</b> <button class="text-copy copy" data-copy="NinjaSMP.gr">NinjaSMP.gr</button></span><br><span class="bedrock-line"><b>Port:</b> <button class="text-copy copy" data-copy="19132">19132</button></span></p>
+              <strong>Bedrock:</strong><br><span class="bedrock-line"><b>IP:</b> <button class="text-copy copy" data-copy="bedrock.NinjaSMP.gr">bedrock.NinjaSMP.gr</button></span><br><span class="bedrock-line"><b>Port:</b> <button class="text-copy copy" data-copy="19132">19132</button></span></p>
             </div>
           </article>
         </div>
@@ -165,7 +172,7 @@
     </section>
 
     <section class="photo-break">
-      <img src="assets/village.webp" alt="Village area του Ninja SMP" loading="lazy">
+      <img src="assets/village.webp" alt="Village area του Ninja SMP" loading="lazy" class="screenshot-link" data-caption="Η κοινότητα χτίζει τον κόσμο του Ninja SMP">
       <div><span>🏘️</span><h2>Χτίσε το δικό σου κομμάτι στον κόσμο.</h2></div>
     </section>
 
@@ -216,18 +223,18 @@
         <h2>Μια μικρή βόλτα στον server.</h2>
       </div>
       <div class="gallery">
-        <img src="assets/castle.webp" alt="Castle build" loading="lazy">
-        <img src="assets/desert.webp" alt="Desert build" loading="lazy">
-        <img src="assets/map.webp" alt="World map wall" loading="lazy">
-        <img src="assets/interior.webp" alt="Base interior" loading="lazy">
+        <img src="assets/castle.webp" alt="Castle build" loading="lazy" class="screenshot-link" data-caption="Castle build">
+        <img src="assets/desert.webp" alt="Desert build" loading="lazy" class="screenshot-link" data-caption="Desert build">
+        <img src="assets/map.webp" alt="World map wall" loading="lazy" class="screenshot-link" data-caption="Ο χάρτης του κόσμου">
+        <img src="assets/interior.webp" alt="Base interior" loading="lazy" class="screenshot-link" data-caption="Εσωτερικό βάσης">
       </div>
     </section>
 
     <section class="final-cta">
       <div class="wrap">
         <img src="assets/ninja-season2-logo.png" alt="">
-        <h2>Τα λέμε μέσα στο SMP.</h2>
-        <p>Java: <strong>NinjaSMP.gr</strong><br>Bedrock: <strong>IP: NinjaSMP.gr</strong> • <strong>Port: 19132</strong></p>
+        <h2>Τα λέμε μέσα στον SMP.</h2>
+        <p>Java: <strong>NinjaSMP.gr</strong><br>Bedrock: <strong>IP: bedrock.NinjaSMP.gr</strong> • <strong>Port: 19132</strong></p>
         <div class="hero-actions">
           <a class="btn btn-fire" href="https://www.youtube.com/@Ninja2die/join" target="_blank" rel="noopener">🔥 Γίνε μέλος</a>
           <a class="btn btn-discord" href="https://discord.com/invite/3ZPrUQNKSC" target="_blank" rel="noopener">💬 Discord</a>
@@ -249,6 +256,18 @@
       NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
     </p>
   </footer>
+
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Κλείσιμο">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Προηγούμενη φωτογραφία">‹</button>
+    <div class="lightbox-stage">
+      <img id="lightboxImage" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+      <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Επόμενη φωτογραφία">›</button>
+  </div>
 
   <div class="toast" id="toast">Αντιγράφηκε!</div>
   <script src="script.js"></script>
