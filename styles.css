@@ -494,24 +494,38 @@ body.lightbox-lock{overflow:hidden}
     justify-content: center;
   }
 }
+/* Blue live server button */
+.hero-actions .server-live {
+  background: linear-gradient(
+    135deg,
+    #1877f2,
+    #2bc3ff
+  ) !important;
 
-  border: 1px solid rgba(120, 225, 255, .7);
+  border: 1px solid rgba(120, 225, 255, .9) !important;
+  color: #fff !important;
 
   box-shadow:
-    0 0 15px rgba(43, 195, 255, .35),
-    0 0 28px rgba(24, 119, 242, .18);
+    0 0 16px rgba(43, 195, 255, .45),
+    0 0 32px rgba(24, 119, 242, .25) !important;
 }
 
-.server-live:hover {
-  border-color: rgba(150, 235, 255, .95);
+.hero-actions .server-live:hover {
+  background: linear-gradient(
+    135deg,
+    #2686ff,
+    #48d4ff
+  ) !important;
+
+  border-color: rgba(150, 235, 255, .95) !important;
 
   box-shadow:
-    0 0 22px rgba(43, 195, 255, .55),
-    0 0 40px rgba(24, 119, 242, .3);
+    0 0 24px rgba(43, 195, 255, .65),
+    0 0 42px rgba(24, 119, 242, .35) !important;
 
   transform: translateY(-2px);
 }
 
 .server-live-text small {
-  color: rgba(255,255,255,.8);
+  color: rgba(255,255,255,.85);
 }
