@@ -529,3 +529,37 @@ body.lightbox-lock{overflow:hidden}
 .server-live-text small {
   color: rgba(255,255,255,.85);
 }
+.hero-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  width:min(700px, 100%);
+  margin:0 auto;
+}
+
+.hero-actions > *{
+  width:100%;
+  min-height:58px;
+}
+
+.hero-actions .btn-fire{
+  white-space:nowrap;
+  padding-left:18px;
+  padding-right:18px;
+}
+
+.hero-actions .server-live{
+  justify-content:center;
+  text-align:center;
+}
+
+@media(max-width:650px){
+  .hero-actions{
+    grid-template-columns:1fr;
+    width:min(420px, 100%);
+  }
+
+  .hero-actions .btn-fire{
+    white-space:normal;
+  }
+}
