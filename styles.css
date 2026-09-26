@@ -368,3 +368,51 @@ body.lightbox-lock{overflow:hidden}
   touch-action:pan-y;
 }
 
+/* ===== v9 smooth screenshot slide =====
+   GPU-friendly: transform + opacity only */
+.lightbox-stage{
+  overflow:hidden;
+}
+
+.lightbox-stage img{
+  will-change:transform,opacity;
+  transition:
+    transform 145ms cubic-bezier(.22,.75,.25,1),
+    opacity 145ms ease;
+}
+
+.lightbox-stage img.slide-exit-left{
+  transform:translate3d(-8%,0,0) scale(.985);
+  opacity:0;
+}
+
+.lightbox-stage img.slide-exit-right{
+  transform:translate3d(8%,0,0) scale(.985);
+  opacity:0;
+}
+
+.lightbox-stage img.slide-enter-from-right{
+  transform:translate3d(8%,0,0) scale(.985);
+  opacity:0;
+  transition:none;
+}
+
+.lightbox-stage img.slide-enter-from-left{
+  transform:translate3d(-8%,0,0) scale(.985);
+  opacity:0;
+  transition:none;
+}
+
+.lightbox-stage img.slide-enter-active{
+  transform:translate3d(0,0,0) scale(1);
+  opacity:1;
+  transition:
+    transform 180ms cubic-bezier(.22,.75,.25,1),
+    opacity 180ms ease;
+}
+
+@media(prefers-reduced-motion:reduce){
+  .lightbox-stage img{
+    transition:none !important;
+  }
+}

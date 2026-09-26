@@ -56,9 +56,54 @@ function closeLightbox(){
   document.body.classList.remove("lightbox-lock");
 }
 
+let slideAnimating = false;
+
 function moveShot(delta){
-  shotIndex = (shotIndex + delta + shots.length) % shots.length;
-  renderShot();
+  if (!shots.length || slideAnimating) return;
+
+  slideAnimating = true;
+  const direction = delta > 0 ? 1 : -1;
+
+  // Slide current image out.
+  lightboxImage.classList.remove(
+    "slide-enter-from-right",
+    "slide-enter-from-left",
+    "slide-enter-active"
+  );
+  lightboxImage.classList.add(
+    direction > 0 ? "slide-exit-left" : "slide-exit-right"
+  );
+
+  window.setTimeout(() => {
+    shotIndex = (shotIndex + delta + shots.length) % shots.length;
+
+    const shot = shots[shotIndex];
+    lightboxImage.src = shot.currentSrc || shot.src;
+    lightboxImage.alt = shot.alt || "";
+    lightboxCaption.textContent = shot.dataset.caption || shot.alt || "";
+    lightboxCounter.textContent = `${shotIndex + 1} / ${shots.length}`;
+
+    lightboxImage.classList.remove("slide-exit-left", "slide-exit-right");
+    lightboxImage.classList.add(
+      direction > 0 ? "slide-enter-from-right" : "slide-enter-from-left"
+    );
+
+    // Force a frame so the browser can animate from the starting position.
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        lightboxImage.classList.add("slide-enter-active");
+      });
+    });
+
+    window.setTimeout(() => {
+      lightboxImage.classList.remove(
+        "slide-enter-from-right",
+        "slide-enter-from-left",
+        "slide-enter-active"
+      );
+      slideAnimating = false;
+    }, 190);
+  }, 145);
 }
 
 shots.forEach((shot, index) => {
