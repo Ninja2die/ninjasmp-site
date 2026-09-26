@@ -171,3 +171,49 @@ lightbox?.addEventListener("touchend", (e) => {
 
   swipeActive = false;
 }, { passive: true });
+// Live Minecraft server status
+const serverLiveBtn = document.getElementById("serverLiveBtn");
+const serverStatus = document.getElementById("serverStatus");
+const serverPlayers = document.getElementById("serverPlayers");
+const serverDot = document.getElementById("serverDot");
+
+async function updateServerStatus() {
+  try {
+    const response = await fetch(
+      "https://api.mcstatus.io/v2/status/java/NinjaSMP.gr"
+    );
+
+    if (!response.ok) {
+      throw new Error("Status API error");
+    }
+
+    const data = await response.json();
+
+    if (data.online) {
+      const online = data.players?.online ?? 0;
+      const max = data.players?.max ?? "?";
+
+      serverStatus.textContent = `🟢 Online • ${online}/${max} παίκτες`;
+      serverPlayers.textContent = "NinjaSMP.gr";
+
+      serverDot.classList.remove("offline");
+      serverDot.classList.add("online");
+    } else {
+      serverStatus.textContent = "🔴 Server Offline";
+      serverPlayers.textContent = "NinjaSMP.gr";
+
+      serverDot.classList.remove("online");
+      serverDot.classList.add("offline");
+    }
+  } catch (error) {
+    serverStatus.textContent = "Status προσωρινά μη διαθέσιμο";
+    serverPlayers.textContent = "NinjaSMP.gr";
+
+    serverDot.classList.remove("online", "offline");
+  }
+}
+
+updateServerStatus();
+
+// refresh κάθε 60 δευτερόλεπτα
+setInterval(updateServerStatus, 60000);
