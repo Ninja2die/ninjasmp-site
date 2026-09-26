@@ -193,13 +193,13 @@ async function updateServerStatus() {
       const online = data.players?.online ?? 0;
       const max = data.players?.max ?? "?";
 
-      serverStatus.textContent = `🟢 Online • ${online}/${max} παίκτες`;
+      serverStatus.textContent = `Online • ${online}/${max} παίκτες`;
       serverPlayers.textContent = "NinjaSMP.gr";
 
       serverDot.classList.remove("offline");
       serverDot.classList.add("online");
     } else {
-      serverStatus.textContent = "🔴 Server Offline";
+      serverStatus.textContent = "Server Offline";
       serverPlayers.textContent = "NinjaSMP.gr";
 
       serverDot.classList.remove("online");
