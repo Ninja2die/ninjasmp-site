@@ -416,3 +416,12 @@ body.lightbox-lock{overflow:hidden}
     transition:none !important;
   }
 }
+@media (max-width: 560px) {
+  .final-cta img {
+    margin: 0 auto 18px;
+  }
+
+  .final-cta h2 {
+    margin-top: 0;
+  }
+}
